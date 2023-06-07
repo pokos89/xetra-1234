@@ -9,7 +9,7 @@ def main():
         entry point to run the xetra ETL job.
     """
     # Parsing YAML file
-    config = 'C:/Daten/xetra_project/xetra_1234/configs/xetra_report1_config.yml'
+    config = 'C:\\Pendas\\setra_project\\xetra-1234\\configs\\xetra_report1_config.yml'
     config = yaml.safe_load(open(config))
     # configure logging
     log_config = config['logging']

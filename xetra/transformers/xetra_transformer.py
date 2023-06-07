@@ -121,7 +121,7 @@ class XetraETL():
             return data_frame
         self._logger.info('Applying transformations to Xetra source data for report 1 started...')
         # Filtering necessary source columns
-        data_frame = data_frame.loc[:, self.src_args.src_columns]
+        data_frame = data_frame.loc[:, self.src_args.src_columns ]
         # Removing rows with missing values
         data_frame.dropna(inplace=True)
         # Calculating opening price per ISIN and day
@@ -142,7 +142,7 @@ class XetraETL():
                         .transform('last')
         # Renaming columns
         data_frame.rename(columns={
-            self.src_args.src_col_min_price: self.trg_args.trg_col_min_price,
+            self.src_args.src_col_min_price: self.trg_args.trg_col_min_price, 
             self.src_args.src_col_max_price: self.trg_args.trg_col_max_price,
             self.src_args.src_col_traded_vol: self.trg_args.trg_col_dail_trad_vol
             }, inplace=True)
